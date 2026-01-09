@@ -1,10 +1,28 @@
-# SPHINCS+ for dart
+## Overview
 
-This repository contains a Dart package that provides bindings for SPHINCS+. It provides support for all parameter sets included as part of the SPHINCS+ submission to NIST's Post-Quantum Cryptography Standardization project.
+This repository provides Dart bindings for the SPHINCS+ post-quantum
+signature scheme, implemented as a wrapper around the reference C++
+implementation.
+
+The goal is to make SPHINCS+ usable from Dart applications while
+preserving the security properties of the original implementation.
+
+## Why this project
+
+Dart lacks native support for post-quantum signature schemes.
+This project bridges that gap by exposing SPHINCS+ through a clean
+and minimal Dart API, handling FFI boundaries, memory ownership,
+and error propagation.
 
 ## Work in progress
 
 This package is still in the early development phase, so it should not be considered as ready to use.
+
+## Security considerations
+
+- The cryptographic implementation is not reimplemented in Dart.
+- All cryptographic operations rely on the original C++ code.
+- The Dart layer only handles data marshaling and API exposure.
 
 ## Developer setup
 
